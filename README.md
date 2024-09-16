@@ -3,11 +3,11 @@
 The purpose of this project is to demonstrate how to setup Docker containers as well as handling container orchestration with Kubernetes
 <br />
 <p align="center">
-<img src=""/>
+<img src="https://github.com/user-attachments/assets/c88ff460-84c8-42f7-867d-8438f9811b6b"/>
 
 <h2>Languages and Utilities Used</h2>
 
-Bash
+Bash, Docker, Kubernetes minikube
 
 <h2>Environments Used </h2>
 
@@ -16,8 +16,8 @@ Bash
 
 <h2>Project walk-through:</h2>
 <p align="center">
-Navigate to kernel.org : <br/>
-<img src=""/>
+Download the necessary docker packages : <br/>
+<img src="https://github.com/user-attachments/assets/082acfbd-2abe-4cea-a7ab-209d7f847c98 https://github.com/user-attachments/assets/082acfbd-2abe-4cea-a7ab-209d7f847c98"/>
 <br />
 <br />
  :  <br/>
