@@ -7,7 +7,7 @@ The purpose of this project is to demonstrate how to setup Docker containers as 
 
 <h2>Languages and Utilities Used</h2>
 
-Bash, Docker, Kubernetes 
+Bash, Docker, Kubernetes, Vagrant 
 
 <h2>Environments Used </h2>
 
@@ -57,17 +57,28 @@ Download the necessary docker packages : <br/>
 <img src="https://github.com/user-attachments/assets/7f696e1d-5676-4064-af1f-06d7b7e3d86c"/>
 <br />
 <br />
- <br/>
-<img src=""/>   <br/>
-<img src=""/>
+<h2>Kubernetes</h2>
+<br/> Install Vagrant and navigate to the cmd. This is to establish the enviroment<br/>
+<br/>create cd into a directory to execute the vargrant script <br/> 
+<img src="https://github.com/user-attachments/assets/e57f4d3c-f52c-4c24-b593-84ce57174a3e"/>   <br/>
+<br/>
+<br /> Now run vagrant box add centos/8 and pick 2 to use virutalbox for this enviroment <br/> 
+<img src="https://github.com/user-attachments/assets/8b3198ed-ceeb-4c40-abe2-ee756778219b"/><br />
+ <br/>Run vagrant box list to confirm list all added <br/>
+<img src="https://github.com/user-attachments/assets/69e17b9d-08f3-40ce-8292-0dfe9289af68"/>
+<br/>Next run vagrant init to create a vagrant file <br/>
+<br/>Next use notepad Vargrant file and delete its contents. Then add the vagrant script <br/>
+<img src="https://github.com/user-attachments/assets/b8f4f7dd-c001-4200-b72e-15c2da5459a4"/>
 <br />
+<br/> Run "vagrant up" and watch the automation of workernode wms  <br/>
+<img src="https://github.com/user-attachments/assets/9193127b-569e-46a9-98b2-8fb767156ecb"/>
+<img src="https://github.com/user-attachments/assets/a958e4be-0fcd-49d4-97ce-8ba3bf86cf19"/>
+<img src="https://github.com/user-attachments/assets/c0db7967-ed74-4fb8-bf93-2374ba5469e4"/>
+<br/>Once done run vagrant ssh-config [vm_name] to get the vm info and private key path <br/>
+<img src="https://github.com/user-attachments/assets/75f4d7ed-ddf9-48da-b25f-a1c3210b1254"/>
 <br />
- <br/>
-<img src=""/>
-<img src="/>
-<br />
-<br />
- <br/>
+<br/> 
+<br/>  <br/>
 <img src=""/>   <br/>
 <img src=""/>
 <br />
