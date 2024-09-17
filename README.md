@@ -7,7 +7,7 @@ The purpose of this project is to demonstrate how to setup Docker containers as 
 
 <h2>Languages and Utilities Used</h2>
 
-Bash, Docker, Kubernetes, Vagrant 
+Bash, Docker, Kubernetes, Vagrant or Azure
 
 <h2>Environments Used </h2>
 
@@ -57,7 +57,7 @@ Download the necessary docker packages : <br/>
 <img src="https://github.com/user-attachments/assets/7f696e1d-5676-4064-af1f-06d7b7e3d86c"/>
 <br />
 <br />
-<h2>Kubernetes</h2>
+<h2>Kubernetes set up, 2 ways</h2>
 <br/> Install Vagrant and navigate to the cmd. This is to establish the enviroment<br/>
 <br/>create cd into a directory to execute the vargrant script <br/> 
 <img src="https://github.com/user-attachments/assets/e57f4d3c-f52c-4c24-b593-84ce57174a3e"/>   <br/>
@@ -90,127 +90,30 @@ then confirm with kubectl version -o yaml as shown below <br/>
 <img src="https://github.com/user-attachments/assets/daa39b5d-f46b-45e1-adc1-87f2f8e17422"/>   <br/>
 <br />
 <br />
- <br/>Set up the enviroment variables on the master node <br/>
-<img src=""/>
-<img src="/>
+ <br/>Another way to provision the enviroment for Kubenetes is using cloud providers
+ For this project I will show how to set up enviroment using Azure<br/>
+ <br/> Install Azure cli tooles by running install az-cli az aks install-cli <br/> 
+<img src="https://github.com/user-attachments/assets/c78019ce-6c97-4629-b81e-0551120b7e21"/>
+<br/>Confirm installation <br/> 
+<img src="https://github.com/user-attachments/assets/23bf98ed-a078-47b5-8e6a-cfe5ad12e7b0"/>
 <br />
 <br />
- <br/>
-<img src=""/>   <br/>
-<img src=""/>
+ <br/>Next run az aks create --resource-group myResourceGroup --name myAKSCluster --node-count 2 --generate-ssh-keys --attach-acr $ACRNAME <br/>
+ <br/>note: if ssh keys have already been generated this may cause an error run the command without it and --attach-acr if needed <br/> 
+<img src="https://github.com/user-attachments/assets/19982080-1e42-4034-9e58-54be2cb5ebc4"/>   <br/> confirm installation by looking at Azure portal progress <br/>
+<img src="https://github.com/user-attachments/assets/fdaaecf5-c920-424e-b49b-091ba8c91dae"/>
+<img src="https://github.com/user-attachments/assets/986ce2a6-615d-4218-aaa4-bb250e37874a"/>
+<img src="https://github.com/user-attachments/assets/b8dd8126-e5c8-4796-8acb-208d5b180430"/>
 <br />
 <br />
- <br/>
-<img src=""/>
-<img src="/>
+ <br/>Confirm creation from the cli, command output should appear similar <br/>
+<img src="https://github.com/user-attachments/assets/5b9b0162-98a3-4c47-91d2-2ac29efa6206"/>
+<br/>Next run: az aks get-credentials --resource-group myResourceGroup --name myAKSCluster <br/> 
+<br/>To confirm the nodes in the cluster run kubectl get nodes <br/>
+<img src="https://github.com/user-attachments/assets/76d3da27-cd18-48ae-b944-32f756c18cc0"/>
+<br /> Success! <br/>
 <br />
-<br />
- <br/>
-<img src=""/>   <br/>
-<img src=""/>
-<br />
-<br />
- <br/>
-<img src=""/>
-<img src="/>
-<br />
-<br />
- <br/>
-<img src=""/>   <br/>
-<img src=""/>
-<br />
-<br />
- <br/>
-<img src=""/>
-<img src="/>
-<br />
-<br />
- <br/>
-<img src=""/>   <br/>
-<img src=""/>
-<br />
-<br />
- <br/>
-<img src=""/>
-<img src="/>
-<br />
-<br />
- <br/>
-<img src=""/>   <br/>
-<img src=""/>
-<br />
-<br />
- <br/>
-<img src=""/>
-<img src="/>
-<br />
-<br />
- <br/>
-<img src=""/>   <br/>
-<img src=""/>
-<br />
-<br />
- <br/>
-<img src=""/>
-<img src="/>
-<br />
-<br />
- <br/>
-<img src=""/>   <br/>
-<img src=""/>
-<br />
-<br />
- <br/>
-<img src=""/>
-<img src="/>
-<br />
-<br />
- <br/>
-<img src=""/>   <br/>
-<img src=""/>
-<br />
-<br />
- <br/>
-<img src=""/>
-<img src="/>
-<br />
-<br />
- <br/>
-<img src=""/>   <br/>
-<img src=""/>
-<br />
-<br />
- <br/>
-<img src=""/>
-<img src="/>
-<br />
-<br />
- <br/>
-<img src=""/>   <br/>
-<img src=""/>
-<br />
-<br />
- <br/>
-<img src=""/>
-<img src="/>
-<br />
-<br />
- <br/>
-<img src=""/>   <br/>
-<img src=""/>
-<br />
-<br />
- <br/>
-<img src=""/>
-<img src="/>
-<br />
-<br />
- <br/>
-<img src=""/>   <br/>
-<img src=""/>
-<br />
-<br />
- <br/>
+ 
 <img src=""/>
 <img src="/>
 <br />
