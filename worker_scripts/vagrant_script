@@ -1,0 +1,41 @@
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+
+# All Vagrant configuration is done below. The "2" in Vagrant.configure
+# configures the configuration version (we support older styles for
+# backwards compatibility). Please don't change it unless you know what
+# you're doing.
+Vagrant.configure("2") do |config|
+  # Define the number of VMs
+  NUM_CENTOS_VMS = 2
+
+  # Define VM memory and CPU configurations
+  VM_MEMORY = 1024
+  VM_CPUS = 1
+
+  # Define IP range for private network
+  PRIVATE_IP_BASE = "192.168.33."
+
+  # Helper function to generate a random port
+  def random_port(base)
+    base + rand(100..999)  # Generate a random port number between base+100 and base+999
+  end
+
+  # Define CentOS VMs
+  (1..NUM_CENTOS_VMS).each do |i|
+    config.vm.define "centos8_pvm#{i}" do |vm|
+      vm.vm.box = "centos/8"
+      # Private network IP for each CentOS VM
+      vm.vm.network "private_network", ip: "#{PRIVATE_IP_BASE}#{i}"
+      # Port forwarding for SSH with randomized ports
+      ssh_port = random_port(2200)
+      vm.vm.network "forwarded_port", guest: 22, host: ssh_port
+      vm.vm.provider "virtualbox" do |vb|
+        vb.name = "kubernetes-workernode#{i}"
+        vb.memory = VM_MEMORY
+        vb.cpus = VM_CPUS
+      end
+    end
+  end
+
+ 
