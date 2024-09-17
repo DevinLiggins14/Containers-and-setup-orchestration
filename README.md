@@ -113,10 +113,3 @@ then confirm with kubectl version -o yaml as shown below <br/>
 <img src="https://github.com/user-attachments/assets/76d3da27-cd18-48ae-b944-32f756c18cc0"/>
 <br /> Success! <br/>
 <br />
- 
-<img src=""/>
-<img src="/>
-<br />
-<br />
- <br/>
-<img src=""/>
