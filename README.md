@@ -78,12 +78,19 @@ Download the necessary docker packages : <br/>
 <img src="https://github.com/user-attachments/assets/75f4d7ed-ddf9-48da-b25f-a1c3210b1254"/>
 <br />
 <br/> 
-<br/>  <br/>
-<img src=""/>   <br/>
-<img src=""/>
+<br/> Generate an ssh key on the Master node to easily copy files over to worker nodes:
+<br/>
+<img src="https://github.com/user-attachments/assets/9c6f6c2a-8ce0-4bf0-8717-571bd577faa7"/>
+<br/>
+<br/>
+<br/> Next run wget https://storage.googleapis.com/kubernetes-release/release/v1.24.3/bin/linux/amd64/kubectl
+chmod +x kubectl
+sudo mv kubectl /usr/local/bin/
+then confirm with kubectl version -o yaml as shown below <br/>
+<img src="https://github.com/user-attachments/assets/daa39b5d-f46b-45e1-adc1-87f2f8e17422"/>   <br/>
 <br />
 <br />
- <br/>
+ <br/>Set up the enviroment variables on the master node <br/>
 <img src=""/>
 <img src="/>
 <br />
